@@ -3,8 +3,10 @@ Chrome DevTools Extension for sending decrypted SAML messages to the console
 
 This is for Chrome only (tested on OSX 10.10.5 and Chrome 44.0.2403.157)
 
+## Install
 To install, go to chrome://extensions in your browser, Enable Developer Mode and the click on "Load unpacked Extension..."
 
+## Use
 To view the messages, you'll need to refresh your page, and load developer tools. From here, head to the console tab, and then go to a page which initiates a SAML transaction. You'll then notice the following lines:
 ```
 SAML Request Method: GET
@@ -16,4 +18,7 @@ SAML Request Data: <samlp:AuthnRequest Version="2.0" ID="t78a03d1e-35db-47a9-b3b
 ```
 This should work for both the requests and responses.
 
+## Notes
 The biggest note is that since the Developer Tools only loads per tab, if you have a link that opens up a SP-init transaction in a new tab, then it won't trap any of that data. This is a Chrome issue. 
+
+I've also created a saml-chrome-panel [https://github.com/milton-lai/saml-chrome-panel] which is a devtools extension. It might be more helpful to use that one, but this is still here to provide a simple guide on creating a devtools extension.
