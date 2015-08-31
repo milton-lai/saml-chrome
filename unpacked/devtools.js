@@ -90,7 +90,7 @@ function getDecodedSamlMessageFromPostData(request_response_string, request_meth
 
 
 chrome.devtools.network.addRequestHeaders({
-    "X-ChromeSAML-Version": "0.9"
+    "X-ChromeSAML-Version": "1.1"
 });
 
 chrome.devtools.network.getHAR(function(result) {
